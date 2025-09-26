@@ -113,17 +113,34 @@ button:hover {
   padding: 50px;
 }
 
+@media (max-width: 520px) {
+  .products {
+    display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  justify-content: flex-start;
+  padding: 50px;
+  text-align: center; 
+}
+
+  .product {
+    min-width: 240px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+}
 
 .produtosh2 {
   text-align: center;
 }
 
 .products {
-  display: flex;
-  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
   gap: 30px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
   justify-content: center;
   padding: 50px;
   text-align: center;
@@ -146,9 +163,7 @@ button:hover {
   background: #111;
   border-radius: 15px;
   padding: 20px;
-      min-width: 240px;      
-    flex: 0 0 auto;
-    scroll-snap-align: start;
+  
   transition: transform .25s ease, box-shadow .25s ease;
   box-shadow: 0 0 15px rgba(red, green, blue, alpha);
 }   
